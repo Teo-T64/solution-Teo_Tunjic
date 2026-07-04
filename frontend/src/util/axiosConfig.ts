@@ -21,7 +21,9 @@ axiosConfig.interceptors.request.use((config) => {
     if (!skipToken) {
         const accessToken = localStorage.getItem("token");
         if (accessToken) {
-            config.headers.Authorization = `Bearer ${accessToken}`;
+            config.headers.Authorization = accessToken.startsWith("Bearer ") 
+                ? accessToken 
+                : `Bearer ${accessToken}`;
         }
     }
     return config;

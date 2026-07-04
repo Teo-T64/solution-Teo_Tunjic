@@ -1,5 +1,4 @@
-/*export const BASE_URL = import.meta.env.VITE_BACKEND_URL;*/
-export const BASE_URL = "http://localhost:8080/api"
+export const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const API_ENDPOINTS = {
     LOGIN: "/auth/login",
@@ -10,5 +9,6 @@ export const API_ENDPOINTS = {
     SEARCH_PRODUCTS: "/products/search",
     GET_FAVORITES: "/favorites",
     OPERATE_FAVORITE: (id:number)=>`/favorites/${id}`,
+    GET_CATEGORIES : "https://dummyjson.com/products/category-list"
 
 }
