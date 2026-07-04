@@ -1,6 +1,6 @@
 package com.teo.solution.controller;
 
-import com.teo.solution.dto.AuthResponseDTO;
+import com.teo.solution.dto.auth.AuthResponseDTO;
 import com.teo.solution.dto.auth.LoginReqDTO;
 import com.teo.solution.service.auth.AuthService;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +29,9 @@ public class AuthController {
     @GetMapping("/me")
     public ResponseEntity<AuthResponseDTO> getProfile(@RequestHeader("Authorization") String token) {
         try {
+            if (token != null && token.startsWith("Bearer ")) {
+                token = token.substring(7);
+            }
             AuthResponseDTO profile = authService.getProfile(token);
             return ResponseEntity.ok(profile);
         } catch (Exception e) {

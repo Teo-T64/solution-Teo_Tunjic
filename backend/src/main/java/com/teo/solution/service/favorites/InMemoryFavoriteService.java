@@ -1,6 +1,6 @@
 package com.teo.solution.service.favorites;
 
-import com.teo.solution.dto.AuthResponseDTO;
+import com.teo.solution.dto.auth.AuthResponseDTO;
 import com.teo.solution.dto.ProductResponseDTO;
 import com.teo.solution.service.ProductService;
 import com.teo.solution.service.auth.AuthService;

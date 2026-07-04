@@ -13,8 +13,6 @@ export interface User {
   email: string;
   firstName: string;
   lastName: string;
-  gender: string;
-  image: string;
 }
 
 export interface AuthResponse {

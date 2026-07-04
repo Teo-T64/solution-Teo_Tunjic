@@ -14,6 +14,14 @@ function useUser(): void {
             return;
         }
 
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+            clearUser();
+            navigate("/login");
+            return;
+        }
+
         let isMounted = true;
         
         async function fetchUserInfo() {
@@ -38,7 +46,6 @@ function useUser(): void {
             isMounted = false;
         };
     }, [user, setUser, clearUser, navigate]); 
-
 }
 
 export default useUser;

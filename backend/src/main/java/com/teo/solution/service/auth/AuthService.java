@@ -1,6 +1,6 @@
 package com.teo.solution.service.auth;
 
-import com.teo.solution.dto.AuthResponseDTO;
+import com.teo.solution.dto.auth.AuthResponseDTO;
 import com.teo.solution.dto.auth.LoginReqDTO;
 
 public interface AuthService {
